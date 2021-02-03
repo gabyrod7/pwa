@@ -52,7 +52,7 @@ int main( int argc, char* argv[] ){
       exit(1);
   };
 
-  if (argc < 3){
+  if (argc < 2){
     cout << "======\nUsage:" << endl << "======" << endl;
     cout << "twopi_plotter <results file name> -o <output file name> -s <amp string>" << endl << endl;
     help_message();
@@ -111,10 +111,10 @@ int main( int argc, char* argv[] ){
 
   FitResults results( resultsName );
   if( !results.valid() ){
-    
     cout << "Invalid fit results in file:  " << resultsName << endl;
     exit( 1 );
   }
+  else { cout << "Loaded valid fit results" << endl;}
 
     // ************************
     // set up the plot generator

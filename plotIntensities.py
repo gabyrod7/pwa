@@ -21,21 +21,18 @@ if argc!=2:
     printHelp()
     exit()
 
-momOrAmp=bool(int(sys.argv[1]))
-if momOrAmp:
+if sys.argv[1]:
     # For moments
     massCol="M"
     uncertColName="uncert."
     fileName="project_moments_polarized"
     colToSetYlim="H0_00"
-    print("Runing over: "+fileName)
 else:
     # For amplitudes
     massCol="M"
     uncertColName="err"
     fileName="plot_etapi_delta"
     colToSetYlim="all"
-    print("Runing over: "+fileName)
 
 data=pd.read_csv("bootstrapDiagnostics/"+fileName+"_BS.csv")
 print("Columns in dataframe:")
