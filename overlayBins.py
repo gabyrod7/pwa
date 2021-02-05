@@ -12,7 +12,7 @@ def printHelp():
     print("where x=0 -- for all bins run etapi_plotter")
     print("      x=1 -- gather all results from etapi_plotter into overlayPlots folder")
     print("      x=2 -- do both")
-    print('where y is a string -- Set to "" to do nothing')
+    print('where y is a string -- Set to "" to do nothing and plot everything' )
     print("      y is a string containing _ separated amplitudes to plot that are again ; separated to group another set")
     print('      i.e "S0+_D0+;S0+_D0+_P1+" will run etapi_plotter twice. One that plots the S0+ and D0+ contributions only.')
     print("      The second will include P1+ contribution also")
